@@ -16,6 +16,7 @@ class CreateApplicationStatusesTable extends Migration
         Schema::create('application__statuses', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

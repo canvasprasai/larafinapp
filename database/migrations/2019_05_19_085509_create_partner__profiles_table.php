@@ -15,6 +15,9 @@ class CreatePartnerProfilesTable extends Migration
     {
         Schema::create('partner__profiles', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('user_id');
+            $table->string('name')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

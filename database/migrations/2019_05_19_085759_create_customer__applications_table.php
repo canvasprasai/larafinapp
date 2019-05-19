@@ -15,6 +15,7 @@ class CreateCustomerApplicationsTable extends Migration
     {
         Schema::create('customer__applications', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
